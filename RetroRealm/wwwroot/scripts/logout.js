@@ -1,6 +1,8 @@
+import baseUrl from "../scripts/baseURL.js";
+
 async function logout() {
   const refreshToken = sessionStorage.getItem("RefreshToken");
-  const response = await fetch("https://localhost:7234/api/Logout", {
+  const response = await fetch(`${baseURL}/api/Logout`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
