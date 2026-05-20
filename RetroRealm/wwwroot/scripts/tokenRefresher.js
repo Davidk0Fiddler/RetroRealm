@@ -1,3 +1,5 @@
+import baseUrl from "../scripts/baseURL.js";
+
 async function refreshToken(refreshToken) {
   if (!refreshToken || refreshToken == "undefined") {
     // console.error("No refresh token");
@@ -5,7 +7,7 @@ async function refreshToken(refreshToken) {
   }
   console.log(refreshToken);
 
-  const response = await fetch("https://localhost:7234/api/Refreshtoken", {
+  const response = await fetch(`${baseURL}/api/Refreshtoken`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
