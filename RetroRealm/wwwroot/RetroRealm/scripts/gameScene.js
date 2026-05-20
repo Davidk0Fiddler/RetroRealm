@@ -29,7 +29,7 @@ export const gameScene = k.scene("gameScene", async () => {
        WEBSOCKET
     ========================= */
 
-  const SOCKET = new WebSocket("wss://localhost:7234/ws");
+  const SOCKET = new WebSocket("wss://localhost:5001/ws");
 
   SOCKET.onopen = () => {
     sendUpdate();
