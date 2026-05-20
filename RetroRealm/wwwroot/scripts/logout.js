@@ -1,4 +1,4 @@
-import baseUrl from "./baseURL.js";
+import baseURL from "./baseURL.js";
 
 async function logout() {
   const refreshToken = sessionStorage.getItem("RefreshToken");
