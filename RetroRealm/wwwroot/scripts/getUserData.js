@@ -1,9 +1,11 @@
+import baseUrl from "../scripts/baseURL.js";
+
 async function getUserData() {
     const refreshToken = sessionStorage.getItem("RefreshToken");
     const token = sessionStorage.getItem("Token")
     let userData;
     for (let i = 0; i < 5; i++) {
-        const response = await fetch("https://localhost:7234/api/GetUserData", {
+        const response = await fetch(`${baseURL}/api/GetUserData`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
