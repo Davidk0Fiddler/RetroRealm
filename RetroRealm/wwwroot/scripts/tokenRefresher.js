@@ -1,4 +1,4 @@
-import baseUrl from "../scripts/baseURL.js";
+import baseUrl from "./baseURL.js";
 
 async function refreshToken(refreshToken) {
   if (!refreshToken || refreshToken == "undefined") {
